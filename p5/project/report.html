@@ -11803,7 +11803,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 载入此项目所需要的库</span>
@@ -11827,7 +11827,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 载入波士顿房屋的数据集</span>
@@ -11894,25 +11894,25 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#TODO 1</span>
 
 <span class="c1">#目标：计算价值的最小值</span>
-<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1">#目标：计算价值的最大值</span>
-<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1">#目标：计算价值的平均值</span>
-<span class="n">mean_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mean_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1">#目标：计算价值的中值</span>
-<span class="n">median_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">median_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1">#目标：计算价值的标准差</span>
-<span class="n">std_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">std_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1">#目标：输出计算的结果</span>
 <span class="k">print</span> <span class="s2">&quot;Statistics for Boston housing dataset:</span><span class="se">\n</span><span class="s2">&quot;</span>
@@ -11943,7 +11943,7 @@ Minimum price: $105,000.00
 Maximum price: $1,024,800.00
 Mean price: $454,342.94
 Median price $438,900.00
-Standard deviation of prices: $165,340.28
+Standard deviation of prices: $165,171.13
 </pre>
 </div>
 </div>
@@ -11972,9 +11972,9 @@ Standard deviation of prices: $165,340.28
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-1---&#22238;&#31572;&#65306;">&#38382;&#39064; 1 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-1---&#22238;&#31572;&#65306;">&#182;</a></h3><p>RM:当RM值增大时，MEDV的值增大；
-LSTAT:当LSTAT值增大时，MEDV的值减小；
-PTRATIO:通过对数据表的直观观察，并没有发现PTRATIO与MEDV有直接的大小变化关系。</p>
+<h3 id="&#38382;&#39064;-1---&#22238;&#31572;&#65306;">&#38382;&#39064; 1 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-1---&#22238;&#31572;&#65306;">&#182;</a></h3><p>RM:当RM值增大时，MEDV的值增大；因为当房间数量多的时候，房屋可利用空间更大。</p>
+<p>LSTAT:当LSTAT值增大时，MEDV的值减小；如果该地区低收入阶层比重大，其中一个原因很可能就是，房屋价格低，吸引了低收入阶层，才导致该地区低收入阶层比重大。</p>
+<p>PTRATIO:通过对数据表的直观观察，并没有发现PTRATIO与MEDV有直接的大小变化关系。直观来说，当学生和老师数目比比较小的时候，说明该地区教育资源更为充沛，但是通过观察实际数据，没有有发现其与价格的直接关系。</p>
 
 </div>
 </div>
@@ -11996,7 +11996,7 @@ PTRATIO:通过对数据表的直观观察，并没有发现PTRATIO与MEDV有直�
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO 2</span>
@@ -12028,7 +12028,7 @@ PTRATIO:通过对数据表的直观观察，并没有发现PTRATIO与MEDV有直�
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#38382;&#39064;-2---&#22238;&#31572;:">&#38382;&#39064; 2 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-2---&#22238;&#31572;:">&#182;</a></h3><ol>
-<li><p>讲一个数据集分成训练集和测试集，因为这两个数据集就是从同一个数据集分出来的，所以有共同的数据特征，这样，当模型在进行测试的时候，没有通过，则马上可以知道是模型出错了，错误来源是，因模型无法表示基本数据的复杂度而造成的偏差（bias）。</p>
+<li><p>将一个数据集分成训练集和测试集，因为这两个数据集就是从同一个数据集分出来的，所以有共同的数据特征，这样，如果当模型在进行测试的时候，预测结果出错，则可以立马判断该模型无法准确预测结果，出现欠拟合或者过拟合错误。</p>
 </li>
 <li><p>因为其测试用数据集来自于训练数据集，模型训练就来着这一批数据集，所以，这一批数据是无法检验模型有效性的，无法检验模型面对新数据时候，是否能有效的识别。</p>
 </li>
@@ -13301,8 +13301,9 @@ ZmZmZpbz/yjh8jcaJmi2AAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-4---&#22238;&#31572;:">&#38382;&#39064; 4 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-4---&#22238;&#31572;:">&#182;</a></h3><p>从四幅图来可以看出来，当深度不断增加的时候，训练集曲线评分越来越高，而验证集则经历了先升高，后下降的走势。
-训练量的增加，并没有十分有效的改变曲线走势，对模型提醒有效性欠佳。</p>
+<h3 id="&#38382;&#39064;-4---&#22238;&#31572;:">&#38382;&#39064; 4 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-4---&#22238;&#31572;:">&#182;</a></h3><p>以第四幅图为例，其最大深度为10，可以看出，该模型在训练时候，一直处于较高分数，接近于1，随着训练量增加，有稍微降低，但是仍然很高。</p>
+<p>但是验证集曲线，当训练量过少的时候，比如25左右，得分为0，但是会随着训练量的增加而不断升高，但是整体分数还是很低，只有在0.6上下。</p>
+<p>按照训练量来说，随着训练量的增加，验证集分数在提高，但是很有限，并不能有效提升模型的表现。</p>
 
 </div>
 </div>
@@ -13864,11 +13865,11 @@ JyIigaLgExGRQPn/U0M+sYz4hhEAAAAASUVORK5CYII=
 <h3 id="&#38382;&#39064;-8---&#22238;&#31572;&#65306;">&#38382;&#39064; 8 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-8---&#22238;&#31572;&#65306;">&#182;</a></h3><ol>
 <li><p>就是将同一份数据集，平均分成K份，取其中的一部分用作模型训练，另外一部分用作模型验证。这种方法称为K折交叉验证法。</p>
 </li>
-<li><p>GridSearchCV通过遍历参数的组合，每种参数组合多次遍历产生的评分的平均分，通过找到最高分，来找到最佳参数组合。</p>
+<li><p>GridSearchCV通过遍历参数的组合，每种参数组合多次遍历产生的评分的平均分，通过找到最高分，来找到最佳参数组合。参数以及其备选值通过GridSearchCV函数的param_grid参数传入，该参数是字典或者字典列表。而评估模型得分的函数也可以通过参数scoring传入，由scroing得分来判断参数param_grid组合的好坏。</p>
 </li>
 <li><p>告诉我们，每种参数组合的平均验证时长，平均得分时长，平均测试时长喝平均训练时长，以及多次测试的训练平均分，测试平均分。</p>
 </li>
-<li><p>如果网格搜索时候，不使用交叉验证，因为没有均分打乱数据，对模型的训练与验证，会会导致模型缺乏健壮性。交叉验证是通过把一份数据等分成N份，把一部分作为训练集，一部分作为验证集，针对每份训练集数据进行训练，然后再针对每份验证集数据进行验证。</p>
+<li><p>交叉验证，就是将整个数据集均分成K份，取较多一部分数据，作为训练集，剩余部分作为验证集，比如通常情况下分成10等份，9份数据作为训练集，1份数据作为验证集。使用K折交叉验证的好处就是，不需要额外数据，利用整个数据集就可以完成训练和验证的过程，而且用K等份的子数据集，轮流做训练与验证，可以互为验证，更能有效的检验模型的健壮性。如果不使用K折交叉验证，只根据一次验证分数来选择参数，则缺乏可信性，有可能无法检验出欠拟合错误。</p>
 </li>
 </ol>
 
